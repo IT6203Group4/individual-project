@@ -1,0 +1,33 @@
+Style tab
+.tab{
+overflow: hidden;
+border:1px solid rgb(191, 35, 223);
+background-color: #d64ae9;
+width: 40%; 
+}
+
+Style the buttons
+.tab button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    cursor: pointer;
+    padding: 16px 16px;
+    transition: 0.5s;
+}
+Change button background color
+.tab button:hover {
+    background-color: rgb(215, 78, 228);
+}
+Current tab
+.tab button.active{
+    background-color: #d64ae9
+}
+Style tab content
+.tab content{
+    display: none;
+    padding: 8px 14px;
+    border: 2px solid #d64ae9;
+    border-top: none;
+
+}

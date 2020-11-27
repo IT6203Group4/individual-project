@@ -1,0 +1,52 @@
+<div>
+  <h3>{{mode}} Carrental</h3>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <!-- <div style="background-image: url('../../assets/images/Dubai.jpg');"></div> -->
+    <mat-form-field> <input matInput placeholder="First Name" id="ft_nm" [(ngModel)]=" ft_Nm" name="ft_Nm">
+    </mat-form-field><br>
+    <mat-form-field> <input matInput placeholder="Last Name" id="lt_nm" [(ngModel)]=" lt_Nm" name="lt_Nm">
+    </mat-form-field><br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="Em_ID" id="em_id" [(ngModel)]="em_Id" name="em_id">
+    </mat-form-field><br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="Mbl_Num" id="mbl_num" [(ngModel)]="mbl_Num" name="mbl_num">
+    </mat-form-field><br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="Lisn_Num" id="lisn_num" [(ngModel)]="lisn_Num" name="lisn_num">
+    </mat-form-field><br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="pickup/dropoff loc" id="p_d_loc" [(ngModel)]="p_d_Loc" name="p_d_loc">
+    </mat-form-field><br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="Pickup date" id="pickup_dt" [(ngModel)]="pickup_Dt" name = "pickup_Dt" type="date">
+    </mat-form-field> <br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="Pickup time" id="pickup_tym" [(ngModel)]="pickup_Tym" name = "pickup_Tym" type="time">
+    </mat-form-field> <br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="dropoff_dt" id="dropoff_dt" [(ngModel)]="dropoff_Dt"  name = "dropoff_Dt" type="date">
+    </mat-form-field>
+
+
+    <br>
+    <mat-form-field appearence="fill">
+      <input matInput placeholder="dropoff_tym" id="dropoff_tym" [(ngModel)]="dropoff_Tym" name="dropoff_tym"
+        type="time">
+    </mat-form-field><br>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>find my car</mat-label>
+      <mat-select [(ngModel)]="find_my_Car" name="find_my_Car">
+        <mat-option value="SUV">SUV</mat-option>
+        <mat-option value="MiniVan">MiniVan</mat-option>
+        <mat-option value="Intermediate Car">Intermediate Car</mat-option>
+        <mat-option value="FullSize Van">FullSize Van</mat-option>
+      </mat-select>
+    </mat-form-field><br/>
+
+
+    <p> <button type="submit" mat-raised-button>Submit</button> </p> 
+  </form>
+</div>

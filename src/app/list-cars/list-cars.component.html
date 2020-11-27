@@ -1,0 +1,66 @@
+<table class="table table-striped table-bordered">
+  <thead>
+      <tr>
+         <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Id</th>
+          <th>Mobile Number</th>
+          <th>License Number</th>
+          <th>Pickup and Drop Location</th>
+          <th>Pickup Date</th>
+          <th>Pickup Time</th>
+          <th>Drop of Date</th>
+          <th>Drop of Time</th>
+          <th>Selected Car</th>
+          
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let carrental of carrentals let i = index">
+          <td>
+              <input [(ngModel)]="carrental._id" class="form-control" type="text" name="{{carrental._id}}" />
+          </td>
+          <td>
+              <input [(ngModel)]="carrental.Ft_Nm" class="form-control" type="text" name="{{carrental.Ft_Nm}}" />
+          </td>
+          <td>
+              <input [(ngModel)]="carrental.Lt_Nm" class="form-control" type="text" name="{{carrental.Lt_Nm}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.Em_ID" class="form-control" type="text" name="{{carrental.Em_ID}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.Mbl_Num" class="form-control" type="text" name="{{carrental.Mbl_Num}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.Lisn_Num" class="form-control" type="text" name="{{carrental.Lisn_Num}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.p_d_loc" class="form-control" type="text" name="{{carrental.p_d_loc}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.pickup_dt" class="form-control" type="text" name="{{carrental.pickup_dt}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.pickup_tym" class="form-control" type="text" name="{{carrental.pickup_tym}}" /> 
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.dropoff_dt" class="form-control" type="text" name="{{carrental.dropoff_dt}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.dropoff_tym" class="form-control" type="text" name="{{carrental.dropoff_tym}}" />
+          </td>
+          <td>
+            <input [(ngModel)]="carrental.find_my_car" class="form-control" type="text" name="{{carrental.find_my_car}}" />
+          </td>
+          <td>
+            <button mat-button color="warn" (click)="onDelete(carrental._id)">DELETE</button>
+            <button mat-button color="accent" [routerLink]="['/editCarrental', carrental._id]">UPDATE</button>
+          </td>
+          
+      </tr>
+    
+  </tbody>
+  
+</table>

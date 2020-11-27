@@ -1,0 +1,23 @@
+<!-- <p>navigation-menu works!</p> -->
+<div>
+    <div>
+        <img src='../../assets/images/mycarimage.png' width="1000px" height= "300px">
+    </div>
+    <div style = "position:relative; left:-480px;">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+        <b>Menu</b>
+    </button>
+    </div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/home">
+            <b>Home</b>
+    </button>
+        <button mat-menu-item routerLink="/listCars">
+            <b>List Cars</b>
+        </button>
+        <button mat-menu-item routerLink="/addCar">
+            <b>Add Car</b>
+        </button>  
+    </mat-menu>
+</div>
